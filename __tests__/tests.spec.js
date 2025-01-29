@@ -1,14 +1,38 @@
 const fs = require('fs');
 const path = require('path');
-const data = require('../__fixtures__/dataset_1.json');
-const dataEtalon = require('../__fixtures__/dataset_etalon_1.json');
+const http = require('http');
+const https = require('https');
+let data = require('../__fixtures__/dataset_1.json');
+let dataEtalon = require('../__fixtures__/dataset_etalon_1.json');
 
 const FUNC_NAMES = ['calculateSimpleRevenue', 'calculateBonusByProfit', 'analyzeSalesData'];
 
 let mainContent;
 let funcs;
 
-beforeAll(() => {
+async function fetchFileContent(url) {
+  return new Promise((resolve, reject) => {
+    const protocol = url.startsWith('https') ? https : http;
+
+    protocol.get(url, (response) => {
+      let data = '';
+
+      // Получаем данные по частям
+      response.on('data', (chunk) => {
+        data += chunk;
+      });
+
+      // Когда все данные получены
+      response.on('end', () => {
+        resolve(data);
+      });
+    }).on('error', (err) => {
+      reject(err);
+    });
+  });
+}
+
+beforeAll(async () => {
   try {
     // Читаем основной файл
     mainContent = fs.readFileSync(path.join(process.env.GITHUB_WORKSPACE, 'src', 'main.js'), 'utf8');
@@ -24,7 +48,15 @@ beforeAll(() => {
     throw new Error(`Ошибка при получении функций из файла main.js: ${e.message}`);
   }
 
-  //TODO: Переписать, когда заработают стабы
+  try {
+    const fileUrl = 'https://stub.practicum-team.ru/api/sp5_etl/sales_etalon.js';
+    const datasetContent = await fetchFileContent(fileUrl);
+    const datasetFunc = new Function(`${datasetContent}\nreturn data`);
+    dataset = datasetFunc();
+    let { etalon, ...rest } = dataset;
+    data = rest;
+    dataEtalon = etalon;
+  } catch (e) { }
   fs.mkdirSync(path.join(process.env.DIR_TESTS, 'output', 'dataset'), { recursive: true });
   fs.writeFileSync(path.join(process.env.DIR_TESTS, 'output', 'dataset', 'dataset.json'), JSON.stringify(data));
   fs.writeFileSync(path.join(process.env.DIR_TESTS, 'output', 'dataset', 'dataset_etalon.json'), JSON.stringify(dataEtalon));
