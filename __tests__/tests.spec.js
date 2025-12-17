@@ -76,7 +76,7 @@ describe('Функция расчета прибыли: calculateSimpleRevenue',
     expect(result).toBe(200); // 100 * 2 * (1 - 0) = 200
   });
 
-  test('Корректность расчета прибыли без скидки', () => {
+  test('Корректность расчета прибыли со скидкой', () => {
     const product = { sku: 'SKU_001', purchase_price: 50 };
     const purchase = { sale_price: 100, quantity: 2, discount: 20 };
     const result = calculateSimpleRevenue(purchase, product);
