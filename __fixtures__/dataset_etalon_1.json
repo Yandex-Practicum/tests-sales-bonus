@@ -2,7 +2,7 @@
   {
     "seller_id": "seller_1",
     "name": "Alexey Petrov",
-    "revenue": 155403.56,
+    "revenue": 168419.87,
     "profit": 18897.1,
     "sales_count": 55,
     "top_products": [
@@ -52,7 +52,7 @@
   {
     "seller_id": "seller_4",
     "name": "Petr Alekseev",
-    "revenue": 138916.5,
+    "revenue": 149483.83,
     "profit": 12750.83,
     "sales_count": 45,
     "top_products": [
@@ -102,7 +102,7 @@
   {
     "seller_id": "seller_3",
     "name": "Ivan Petrov",
-    "revenue": 125082.47,
+    "revenue": 134222.38,
     "profit": 9660.34,
     "sales_count": 41,
     "top_products": [
@@ -152,7 +152,7 @@
   {
     "seller_id": "seller_2",
     "name": "Mikhail Nikolaev",
-    "revenue": 143834.31,
+    "revenue": 157304.19,
     "profit": 8121.6,
     "sales_count": 48,
     "top_products": [
@@ -202,7 +202,7 @@
   {
     "seller_id": "seller_5",
     "name": "Nikolai Ivanov",
-    "revenue": 111827.96,
+    "revenue": 122913,
     "profit": 5762.38,
     "sales_count": 41,
     "top_products": [
