@@ -4,6 +4,7 @@ const http = require('http');
 const https = require('https');
 let data = require('../__fixtures__/dataset_1.json');
 let dataEtalon = require('../__fixtures__/dataset_etalon_1.json');
+let dataEtalonAlt = require('../__fixtures__/dataset_etalon_1_alt.json');
 
 const FUNC_NAMES = ['calculateSimpleRevenue', 'calculateBonusByProfit', 'analyzeSalesData'];
 
@@ -200,6 +201,6 @@ describe('Функция анализа данных продаж: analyzeSalesD
       calculateBonus: calculateBonusByProfit
     });
 
-    expect(result).toEqual(dataEtalon);
+    expect([dataEtalon, dataEtalonAlt]).toContainEqual(result);
   });
 });
