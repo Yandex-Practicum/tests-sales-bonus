@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const http = require('http');
 const https = require('https');
+const { diff } = require('jest-diff');
 let data = require('../__fixtures__/dataset_1.json');
 let dataEtalon = require('../__fixtures__/dataset_etalon_1.json');
 let dataEtalonAlt = require('../__fixtures__/dataset_etalon_1_alt.json');
@@ -10,6 +11,33 @@ const FUNC_NAMES = ['calculateSimpleRevenue', 'calculateBonusByProfit', 'analyze
 
 let mainContent;
 let funcs;
+
+expect.extend({
+  toEqualOneOf(received, expectedArray) {
+    const pass = expectedArray.some(e => this.equals(received, e));
+
+    if (pass) {
+      return {
+        pass: true,
+        message: () =>
+          `Value matched one of expected values`
+      };
+    }
+
+    // ищем, с чем результат "больше всего похож"
+    const diffs = expectedArray.map(exp => ({
+      exp,
+      text: diff(exp, received)
+    }));
+
+    return {
+      pass: false,
+      message: () =>
+        `Expected value to equal one of:\n${this.utils.printExpected(expectedArray)}\n\n` +
+        `Closest diff:\n${diffs[0].text}`
+    };
+  }
+});
 
 async function fetchFileContent(url) {
   return new Promise((resolve, reject) => {
@@ -201,6 +229,7 @@ describe('Функция анализа данных продаж: analyzeSalesD
       calculateBonus: calculateBonusByProfit
     });
 
-    expect([dataEtalon, dataEtalonAlt]).toContainEqual(result);
+    // expect([dataEtalon, dataEtalonAlt]).toContainEqual(result);
+    expect(result).toEqualOneOf([dataEtalon, dataEtalonAlt])
   });
 });
