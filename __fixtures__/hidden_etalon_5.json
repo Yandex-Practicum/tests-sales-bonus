@@ -1,0 +1,252 @@
+[
+  {
+    "seller_id": "seller_5",
+    "name": "Nikolai Sidorov",
+    "revenue": 195100.72,
+    "profit": 48869.17,
+    "sales_count": 47,
+    "top_products": [
+      {
+        "sku": "SKU_068",
+        "quantity": 10
+      },
+      {
+        "sku": "SKU_055",
+        "quantity": 9
+      },
+      {
+        "sku": "SKU_063",
+        "quantity": 9
+      },
+      {
+        "sku": "SKU_041",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_033",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_038",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_017",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_018",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_077",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_045",
+        "quantity": 6
+      }
+    ],
+    "bonus": 7330.38
+  },
+  {
+    "seller_id": "seller_3",
+    "name": "Alexey Ivanov",
+    "revenue": 191168.87,
+    "profit": 47483.62,
+    "sales_count": 49,
+    "top_products": [
+      {
+        "sku": "SKU_019",
+        "quantity": 12
+      },
+      {
+        "sku": "SKU_051",
+        "quantity": 10
+      },
+      {
+        "sku": "SKU_027",
+        "quantity": 8
+      },
+      {
+        "sku": "SKU_035",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_026",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_056",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_100",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_036",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_074",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_071",
+        "quantity": 6
+      }
+    ],
+    "bonus": 4748.36
+  },
+  {
+    "seller_id": "seller_1",
+    "name": "Mikhail Petrov",
+    "revenue": 175743.31,
+    "profit": 44542.98,
+    "sales_count": 45,
+    "top_products": [
+      {
+        "sku": "SKU_071",
+        "quantity": 11
+      },
+      {
+        "sku": "SKU_027",
+        "quantity": 11
+      },
+      {
+        "sku": "SKU_016",
+        "quantity": 8
+      },
+      {
+        "sku": "SKU_092",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_095",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_043",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_001",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_033",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_084",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_053",
+        "quantity": 5
+      }
+    ],
+    "bonus": 4454.3
+  },
+  {
+    "seller_id": "seller_2",
+    "name": "Nikolai Petrov",
+    "revenue": 172751.99,
+    "profit": 41134.87,
+    "sales_count": 44,
+    "top_products": [
+      {
+        "sku": "SKU_080",
+        "quantity": 9
+      },
+      {
+        "sku": "SKU_058",
+        "quantity": 8
+      },
+      {
+        "sku": "SKU_059",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_012",
+        "quantity": 7
+      },
+      {
+        "sku": "SKU_096",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_055",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_030",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_041",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_008",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_056",
+        "quantity": 6
+      }
+    ],
+    "bonus": 2056.74
+  },
+  {
+    "seller_id": "seller_4",
+    "name": "Alexey Ivanov",
+    "revenue": 118906.04,
+    "profit": 28256.64,
+    "sales_count": 30,
+    "top_products": [
+      {
+        "sku": "SKU_001",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_045",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_046",
+        "quantity": 6
+      },
+      {
+        "sku": "SKU_059",
+        "quantity": 5
+      },
+      {
+        "sku": "SKU_044",
+        "quantity": 5
+      },
+      {
+        "sku": "SKU_039",
+        "quantity": 5
+      },
+      {
+        "sku": "SKU_089",
+        "quantity": 5
+      },
+      {
+        "sku": "SKU_025",
+        "quantity": 4
+      },
+      {
+        "sku": "SKU_092",
+        "quantity": 4
+      },
+      {
+        "sku": "SKU_050",
+        "quantity": 4
+      }
+    ],
+    "bonus": 0
+  }
+]
