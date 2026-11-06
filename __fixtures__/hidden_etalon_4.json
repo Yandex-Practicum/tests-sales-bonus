@@ -1,7 +1,7 @@
 [
   {
     "seller_id": "seller_4",
-    "name": "Petr Ivanov",
+    "name": "Пётр Иванов",
     "revenue": 196389.52,
     "profit": 52152.35,
     "sales_count": 58,
@@ -51,7 +51,7 @@
   },
   {
     "seller_id": "seller_3",
-    "name": "Alexey Petrov",
+    "name": "Алексей Петров",
     "revenue": 187442.3,
     "profit": 48603.91,
     "sales_count": 51,
@@ -101,7 +101,7 @@
   },
   {
     "seller_id": "seller_2",
-    "name": "Ivan Nikolaev",
+    "name": "Иван Николаев",
     "revenue": 163171.87,
     "profit": 43345.46,
     "sales_count": 45,
@@ -151,7 +151,7 @@
   },
   {
     "seller_id": "seller_5",
-    "name": "Nikolai Sidorov",
+    "name": "Николай Сидоров",
     "revenue": 165740.03,
     "profit": 43072.05,
     "sales_count": 42,
@@ -201,7 +201,7 @@
   },
   {
     "seller_id": "seller_1",
-    "name": "Alexey Alekseev",
+    "name": "Алексей Алексеев",
     "revenue": 152159.82,
     "profit": 38992,
     "sales_count": 47,
